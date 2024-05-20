@@ -1,207 +1,6 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #1c1c1c; /* Dark gray background */
-            color: #fff; /* White text color */
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-            min-height: 100vh;
-        }
-
-        .link-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .project-card {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 0;
-            padding-bottom: 75%; /* 4:3 Aspect Ratio */
-            margin: 10px 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
-            color: #fff;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            transform: translateY(100%);
-            opacity: 0;
-        }
-
-        .project-card:hover .project-overlay {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .project-name {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .store-icons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .store-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .store-icon img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-
-        .store-icon:hover {
-            background-color: #3498db;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        @media (max-width: 600px) {
-            .project-name {
-                font-size: 1.2em;
-            }
-
-            .store-icon {
-                width: 30px;
-                height: 30px;
-            }
-
-            .project-overlay {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-        }
-    </style>
-    <title>My Projects</title>
-</head>
-<body>
-    <h1>My Applications</h1>
-    <div class="link-container">
-        <div class="project-card" style="background-image: url('images/bigwin.png');">
-            <div class="project-overlay">
-                <div class="project-name">BigWin</div>
-                <div class="store-icons">
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/play_store.png" alt="Play Store Icon">
-                    </a>
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/app_store.png" alt="App Store Icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card" style="background-image: url('images/hydreau.png');">
-            <div class="project-overlay">
-                <div class="project-name">Hydreau</div>
-                <div class="store-icons">
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/play_store.png" alt="Play Store Icon">
-                    </a>
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/app_store.png" alt="App Store Icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card" style="background-image: url('images/linguamanta.png');">
-            <div class="project-overlay">
-                <div class="project-name">LinguaManta</div>
-                <div class="store-icons">
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/play_store.png" alt="Play Store Icon">
-                    </a>
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/app_store.png" alt="App Store Icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card" style="background-image: url('images/notmuch.png');">
-            <div class="project-overlay">
-                <div class="project-name">Not Much</div>
-                <div class="store-icons">
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/play_store.png" alt="Play Store Icon">
-                    </a>
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/app_store.png" alt="App Store Icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card" style="background-image: url('images/taxcorp.png');">
-            <div class="project-overlay">
-                <div class="project-name">Tax Corp</div>
-                <div class="store-icons">
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/play_store.png" alt="Play Store Icon">
-                    </a>
-                    <a href="" target="_blank" class="store-icon">
-                        <img src="images/app_store.png" alt="App Store Icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,8 +11,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #1c1c1c; /* Dark gray background */
-            color: #fff; /* White text color */
+            background-color: #1c1c1c;
+            /* Dark gray background */
+            color: #fff;
+            /* White text color */
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
@@ -235,7 +36,8 @@
             border-radius: 10px;
             overflow: hidden;
             height: 0;
-            padding-bottom: 75%; /* 4:3 Aspect Ratio */
+            padding-bottom: 75%;
+            /* 4:3 Aspect Ratio */
             margin: 10px 0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -290,15 +92,18 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            transition: filter 0.3s ease; /* Add transition for brightness effect */
+            transition: filter 0.3s ease;
+            /* Add transition for brightness effect */
         }
 
         .store-icon:hover {
-            transform: scale(1.1); /* Increase size on hover */
+            transform: scale(1.1);
+            /* Increase size on hover */
         }
 
         .store-icon:hover img {
-            filter: brightness(1.2); /* Brighten the icon on hover */
+            filter: brightness(1.2);
+            /* Brighten the icon on hover */
         }
 
         h1 {
@@ -331,6 +136,7 @@
     </style>
     <title>My Projects</title>
 </head>
+
 <body>
     <h1>My Applications</h1>
     <div class="link-container">
@@ -397,15 +203,17 @@
                     <a href="" target="_blank" class="store-icon">
                         <img src="images/play_store.png" alt="Play Store Icon">
                     </a>
-                    <a href="" target="_blank" class="store-icon">
+                    <a href="https://apps.apple.com/pk/app/taxcorp-australia/id6471902666" target="_blank"
+                        class="store-icon">
                         <img src="images/app_store.png" alt="App Store Icon">
                     </a>
                 </div>
             </div>
         </div>
 
-       
+
 
     </div>
 </body>
+
 </html>
