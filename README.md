@@ -2,6 +2,9 @@
 
 
 
+### Cadonizer
+![Cadonizer](images/7.png)
+
 ### MBMC Logistics
 ![MBMC Logistics](images/6.png)
 
