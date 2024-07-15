@@ -1,24 +1,34 @@
 # My Projects
 
+Welcome to my portfolio of projects! Below, you'll find a collection of applications I have developed.
+
+## Chicken Quality Tracker
+![CQR](images/cqt.png)
 
 
-### Cadonizer
-![Cadonizer](images/7.png)
+## Cadonizer
+![Cadonizer](images/cadonizer.png)
 
-### MBMC Logistics
-![MBMC Logistics](images/6.png)
 
-### BigWin
-![BigWin](images/1.png)
+## MBMC Logistics
+![MBMC Logistics](images/mbmc.png)
 
-### Hydreau
-![Hydreau](images/2.png)
 
-### LinguaManta
-![LinguaManta](images/3.png)
+## BigWin
+![BigWin](images/bigwin.png)
 
-### Not Much
-![Not Much](images/4.png)
 
-### Tax Corp
-![Tax Corp](images/5.png)
+## Hydreau
+![Hydreau](images/hydreau.png)
+
+
+## LinguaManta
+![LinguaManta](images/linguamanta.png)
+
+
+## Not Much
+![Not Much](images/notmuch.png)
+
+
+## Tax Corp
+![Tax Corp](images/taxcorp.png)
