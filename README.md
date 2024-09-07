@@ -2,6 +2,9 @@
 
 Welcome to my portfolio of projects! Below, you'll find a collection of applications I have developed.
 
+## Noteabli AI
+![NoteableAI](images/noteableAI.png)
+
 ## Chicken Quality Tracker
 ![CQR](images/cqt.png)
 
