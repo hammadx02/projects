@@ -18,13 +18,19 @@ jobs:
         with:
           node-version: "16"
 
+      - name: Check if package.json exists
+        run: ls -la # This lists the files in the current directory to ensure package.json is present
+
       - name: Install dependencies
         run: npm install
-        working-directory: ./frontend # Adjust this path to where your package.json is located
+        working-directory: ./frontend # Adjust to where your package.json is located
+
+      - name: Check if build directory exists
+        run: ls -la ./frontend/build # Make sure the build directory exists before deploying
 
       - name: Build project
         run: npm run build
-        working-directory: ./frontend # Same directory where your package.json is located
+        working-directory: ./frontend # Adjust to where your package.json is located
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
