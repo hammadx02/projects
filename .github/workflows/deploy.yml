@@ -10,44 +10,59 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Step 2: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "16"
 
+      # Step 3: Verify current working directory
       - name: Verify current working directory
-        run: pwd # Print the current directory to verify location
+        run: pwd # Prints the current directory to verify the location
 
-      - name: List directory contents
+      # Step 4: List directory contents in the root folder
+      - name: List directory contents in root
         run: ls -la # List the contents of the root directory
 
-      - name: Verify if package.json exists
-        run: ls -la ./frontend # Adjust to where package.json is located (frontend or root)
+      # Step 5: Verify if package.json exists in the frontend folder (if applicable)
+      - name: Verify if package.json exists in frontend folder
+        run: ls -la ./frontend # Adjust this to the correct path where package.json is located
 
+      # Step 6: Install dependencies
       - name: Install dependencies
         run: |
-          cd ./frontend  # Change to the correct directory if needed (adjust if your package.json is in frontend)
-          ls -la  # Verify the contents after changing directory
+          cd ./frontend  # Adjust to where your package.json is located
           npm install
         shell: bash
 
+      # Step 7: List directory contents in frontend after install
+      - name: List frontend contents after npm install
+        run: |
+          cd ./frontend  # Adjust to your correct directory
+          ls -la
+        shell: bash
+
+      # Step 8: Build project
       - name: Build project
         run: |
           cd ./frontend  # Ensure you're in the correct directory before building
           npm run build
         shell: bash
 
+      # Step 9: List build directory contents after build
       - name: List build directory contents
         run: |
           cd ./frontend/build  # Adjust this path to where your build output is generated
-          ls -la  # Ensure the build directory exists and contains the correct files
+          ls -la
         shell: bash
 
+      # Step 10: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/build # Adjust this to where your build output is located
+          publish_dir: ./frontend/build # Adjust to the correct build output directory
