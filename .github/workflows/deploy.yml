@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: "16"
 
-      - name: Change directory to project folder
-        run: cd path/to/your/project # Adjust this path to where your package.json is located
-
       - name: Install dependencies
         run: npm install
 
