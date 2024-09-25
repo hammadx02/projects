@@ -20,12 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./frontend # Adjust this path to where your package.json is located
 
       - name: Build project
         run: npm run build
+        working-directory: ./frontend # Same directory where your package.json is located
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build # Ensure this matches your build output directory
+          publish_dir: ./frontend/build # Adjust to the correct build output directory
