@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             display: flex;
@@ -15,14 +19,28 @@
             color: #fff;
             margin: 0;
             padding: 20px;
-            box-sizing: border-box;
             min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h4 {
+            color: #ccc;
+            margin-bottom: 40px;
+            font-weight: normal;
         }
 
         .link-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
+            gap: 20px;
             width: 100%;
             max-width: 1200px;
         }
@@ -33,9 +51,7 @@
             background-position: center;
             border-radius: 10px;
             overflow: hidden;
-            height: 0;
             padding-bottom: 75%;
-            margin: 10px 0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -50,12 +66,11 @@
             left: 0;
             width: 100%;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
             background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
             color: #fff;
-            transition: transform 0.3s ease, opacity 0.3s ease;
             transform: translateY(100%);
             opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         .project-card:hover .project-overlay {
@@ -100,15 +115,6 @@
             filter: brightness(1.2);
         }
 
-        h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
         @media (max-width: 600px) {
             .project-name {
                 font-size: 1.2em;
@@ -136,6 +142,7 @@
     <h4>These are the projects I have worked on...</h4>
 
     <div class="link-container">
+        <!-- Project 1 -->
         <div class="project-card" style="background-image: url('images/pantho.png');">
             <div class="project-overlay">
                 <div class="project-name">Pantho - Drop Blood Bank</div>
@@ -150,7 +157,7 @@
             </div>
         </div>
 
-    <div class="link-container">
+        <!-- Project 2 -->
         <div class="project-card" style="background-image: url('images/noteableAI.png');">
             <div class="project-overlay">
                 <div class="project-name">Noteable AI</div>
@@ -165,7 +172,7 @@
             </div>
         </div>
 
-    <div class="link-container">
+        <!-- Project 3 -->
         <div class="project-card" style="background-image: url('images/cqt.png');">
             <div class="project-overlay">
                 <div class="project-name">Chicken Quality Tracker</div>
@@ -180,6 +187,7 @@
             </div>
         </div>
 
+        <!-- Add more project cards as needed -->
         <div class="project-card" style="background-image: url('images/cadonizer.png');">
             <div class="project-overlay">
                 <div class="project-name">Cadonizer</div>
@@ -277,11 +285,12 @@
                 </div>
             </div>
         </div>
+    
     </div>
 
     <script>
         function checkLink(event, element) {
-            console.log('checkLink function called'); // Debugging statement
+            console.log('checkLink function called');
             if (!element.href || element.href === '#') {
                 event.preventDefault();
                 alert("🚫 There is no link available.");
@@ -291,3 +300,4 @@
 </body>
 
 </html>
+
